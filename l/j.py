@@ -1,15 +1,7 @@
-import json 
-x = {
-  "name": "John",
-  "age": 30,
-  "married": True,
-  "divorced": False,
-  "children": ("Ann","Billy"),
-  "pets": None,
-  "cars": [
-    {"model": "BMW 230", "mpg": 27.5},
-    {"model": "Ford Edge", "mpg": 24.1}
-  ]
-}
+import json
 
-print(json.dumps(x, indent=4, sort_keys=True))
+data = {"fecha": '13/02/12',"hora": '13:05', "dato": 1002}
+
+with open('data.json', 'w') as file:
+    json.dump(data, file, indent=4)
+
